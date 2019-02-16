@@ -1,27 +1,6 @@
-<div>
-  	<h2>Courses I've done</h2>
-  </div>
-
-  <div>
-  	<ul>
-  		<li>COMP 1000: Introduction to Computer Science</li>
-  		<li>COMP 1001: Introduction to Programming</li>
-  		<li>COMP 1002: Introduction to Logic for CS</li>
-  		<li>COMP 2001: OOP and Human-Computer Interaction</li>
-  		<li>COMP 2002: Data Structures and Algorithms</li>
-  		<li>COMP 2003: Computer Architecture</li>
-  		<li>COMP 2004: Operating Systems</li>
-  		<li>COMP 2005: Software Engineering</li>
-  		<li>COMP 2006: Computer Networking</li>
-  		<li>COMP 2007: Introduction to Information Management</li>
-  		<li>COMP 2008: Social Issues and Professional Practices</li>
-  		<li>COMP 2510: Programming in C/C++</li>
-  		<li>COMP 3201: Nature-Inspired Computing</li>
-  		<li>COMP 3301: Visual Computing and Applications</li>
-  		<li>COMP 3300: Interactive Technologies</li>
-  		<li>COMP 4300: Introduction to Game Programming</li>
-  		<li>COMP 4768: Software Development for Mobile Devices</li>
-  		<li>COMP 4770: Team Project</li>
-
-  	</ul>
-  </div>
+<h2>Courses I've done</h2>
+<ul>
+  <li *ngFor="let course of courses">
+    {{course.name}}
+  </li>
+</ul>
