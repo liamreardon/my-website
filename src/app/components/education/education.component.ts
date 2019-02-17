@@ -7,6 +7,7 @@ import { CourseService } from '../../services/course.service';
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.css']
 })
+
 export class EducationComponent implements OnInit {
 
   courses: Course[];
