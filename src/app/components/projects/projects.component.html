@@ -1,10 +1,11 @@
 <h1>PROJECTS</h1>
 
-<ul>
-    <li *ngFor="let project of projects">
-      {{project.name}}
-      {{project.description}}
-      {{project.img}}
-      {{project.link}}
-    </li>
+<ul *ngFor="let project of projects">
+    <a href="{{project.link}}">
+        <li>
+            <img src="{{project.img}}">
+            <h3>{{project.name}}</h3>
+            <p>{{project.description}}</p>
+        </li>
+    </a>
 </ul>
