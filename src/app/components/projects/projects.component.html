@@ -1,1 +1,10 @@
 <h1>PROJECTS</h1>
+
+<ul>
+    <li *ngFor="let project of projects">
+      {{project.name}}
+      {{project.description}}
+      {{project.img}}
+      {{project.link}}
+    </li>
+</ul>
