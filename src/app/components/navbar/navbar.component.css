@@ -1,8 +1,18 @@
-.navbar-brand,
+.navbar-brand {
+
+    
+}
+
 .navbar-nav li a {
     line-height: 100px;
     height: 100px;
     padding-top: 0;
+    color: #c01f1f;
+
+}
+
+.navbar-expand-lg {
+    background-color: #ebecf1;
 }
 
 
