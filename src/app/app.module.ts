@@ -14,6 +14,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ProjectService } from './services/project.service'
+import { CourseService } from './services/course.service'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ProjectService } from './services/project.service'
     HttpClientModule
   ],
   providers: [
-    ProjectService
+    ProjectService,
+    CourseService
   ],
   bootstrap: [AppComponent]
 })

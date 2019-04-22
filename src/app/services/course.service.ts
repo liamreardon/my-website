@@ -1,16 +1,23 @@
-import { Injectable } from '@angular/core';
-import { Course } from '../models/course';
-import { COURSES } from '../models/static/completed-courses';
-import { Observable, of } from 'rxjs';
+import { Injectable } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs'
+import { Course} from '../models/course';
+import { throwError} from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CourseService {
 
-  constructor() { }
+  private coursesURL = 'http://localhost:3000/my_courses.json'
+
+  constructor(private http: HttpClient) {}
 
   getCourses(): Observable<Course[]> {
-    return of(COURSES);
+      return this.http.get(this.coursesURL).pipe(map((res: Course[]) => {
+          return res
+      }), catchError(error => throwError(error.message || error)))
   }
+  
 }
