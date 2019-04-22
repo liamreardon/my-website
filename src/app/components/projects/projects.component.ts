@@ -1,29 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../../models/project';
 import { ProjectService } from '../../services/project.service';
-
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.scss'],
+  providers: [ ProjectService ]
 })
 export class ProjectsComponent implements OnInit {
 
-  projects: Project[];
+  projects: Project[] = []
+  mode = "Observable"
+  errorMessage: string
 
   gitURL = "https://github.com/liamreardon";
 
   constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
-    this.getProjects();
+    let time = timer(0, 5000)
+    time.subscribe(() => this.getDocuments())
   }
-
-  getProjects(): void {
-    this.projectService.getProjects().subscribe(
-      projects => this.projects = projects
-    );
+  
+  getDocuments() {
+    this.projectService.getProjects()
+        .subscribe(
+          documents => this.projects = documents,
+          error => this.errorMessage = <any>error
+        )
   }
 
 }

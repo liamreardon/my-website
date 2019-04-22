@@ -1,17 +1,23 @@
-import { Injectable } from '@angular/core';
-import { PROJECTS } from '../models/static/my-projects';
+import { Injectable } from '@angular/core'
+import { HttpClient, HttpResponse, HttpHeaders, HttpRequest } from '@angular/common/http'
+import { Observable } from 'rxjs'
 import { Project } from '../models/project';
-import { Observable, of } from 'rxjs';
+import {throwError} from 'rxjs';
+import {catchError, map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProjectService {
 
-  constructor() { }
+  private projectsURL = 'http://localhost:3000/my_projects.json'
+
+  constructor(private http: HttpClient) {}
 
   getProjects(): Observable<Project[]> {
-    return of(PROJECTS)
+      return this.http.get(this.projectsURL).pipe(map((res: Project[]) => {
+          return res
+      }), catchError(error => throwError(error.message || error)))
   }
   
 }

@@ -2,10 +2,12 @@
   <h2>Memorial University of Newfoundland</h2>
   <p>B.Sc., Computer Science</p>
   <hr>
-  <h2>Courses I've done</h2>
-  <ul>
-    <li *ngFor="let course of courses">
-      {{course.name}}
-    </li>
-  </ul>
+  <h3>Courses I've done</h3>
+  <div class="wrapper">
+    <ul>
+      <li class="box" *ngFor="let course of courses.slice().reverse()">
+        {{course.name}}
+      </li>
+    </ul>
+  </div>
 </div>
