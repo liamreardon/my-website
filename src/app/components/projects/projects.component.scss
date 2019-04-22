@@ -1,13 +1,15 @@
 * {margin: 0; padding: 0;}
  
 div {
-  margin: 20px;
+  margin: auto;
 }
  
 ul {
   list-style-type: none;
-  width: 500px;
+  width: 500px;;
+  margin: 0 auto;
 }
+
  
 h3 {
   font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
@@ -26,12 +28,13 @@ li p {
 li {
   padding: 10px;
   overflow: auto;
+  &:hover {
+    background: #eee;
+    cursor: pointer;
+  }
+  
 }
  
-li:hover {
-  background: #eee;
-  cursor: pointer;
-}
 
 a {
     text-decoration: none;
@@ -40,4 +43,9 @@ a {
 
 .container {
   margin-top: 120px;
+}
+
+
+h1 {
+  text-align: center;
 }

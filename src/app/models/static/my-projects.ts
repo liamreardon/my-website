@@ -12,5 +12,41 @@ export const PROJECTS: Project[] = [
         description: 'Collaborative Tool for students in CS 2005 Software Engineering',
         img: 'assets/img/2005.png',
         link: 'https://github.com/liamreardon/CS-2005-Collaborative-Tool'
-    }
+    },
+    {
+        name: 'CS 2005 Collaborative Tool',
+        description: 'Collaborative Tool for students in CS 2005 Software Engineering',
+        img: 'assets/img/2005.png',
+        link: 'https://github.com/liamreardon/CS-2005-Collaborative-Tool'
+    },
+    {
+        name: 'CS 2005 Collaborative Tool',
+        description: 'Collaborative Tool for students in CS 2005 Software Engineering',
+        img: 'assets/img/2005.png',
+        link: 'https://github.com/liamreardon/CS-2005-Collaborative-Tool'
+    },
+    {
+        name: 'CS 2005 Collaborative Tool',
+        description: 'Collaborative Tool for students in CS 2005 Software Engineering',
+        img: 'assets/img/2005.png',
+        link: 'https://github.com/liamreardon/CS-2005-Collaborative-Tool'
+    },
+    {
+        name: 'CS 2005 Collaborative Tool',
+        description: 'Collaborative Tool for students in CS 2005 Software Engineering',
+        img: 'assets/img/2005.png',
+        link: 'https://github.com/liamreardon/CS-2005-Collaborative-Tool'
+    },
+    {
+        name: 'CS 2005 Collaborative Tool',
+        description: 'Collaborative Tool for students in CS 2005 Software Engineering',
+        img: 'assets/img/2005.png',
+        link: 'https://github.com/liamreardon/CS-2005-Collaborative-Tool'
+    },
+    {
+        name: 'CS 2005 Collaborative Tool',
+        description: 'Collaborative Tool for students in CS 2005 Software Engineering',
+        img: 'assets/img/2005.png',
+        link: 'https://github.com/liamreardon/CS-2005-Collaborative-Tool'
+    },
 ]

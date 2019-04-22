@@ -1,3 +1,55 @@
+
 .container {
     margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.wrapper {
+  display: grid;
+  
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  
+}
+
+h2, h3, p {
+    text-align: center;
+}
+ 
+div {
+  margin: auto;
+}
+ 
+ul {
+  width: 500px;
+  margin: 0 auto;
+  
+}
+ 
+li {
+  padding: 10px;
+  overflow: auto;
+  margin: 0 0 3px 0;
+  &:hover {
+    background: red;
+  }
+  
+}
+
+
+
+
+ 
