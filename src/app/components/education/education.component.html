@@ -1,13 +1,15 @@
 <div class="container">
-  <h2>Memorial University of Newfoundland</h2>
-  <p>B.Sc., Computer Science</p>
-  <hr>
-  <h3>Courses I've done</h3>
-  <div class="wrapper">
-    <ul>
-      <li class="box" *ngFor="let course of courses.slice().reverse()">
-        {{course.title}}
-      </li>
-    </ul>
+  <div class="card">
+    <h2>Memorial University of Newfoundland</h2>
+    <p>B.Sc., Computer Science</p>
+    <hr>
+    <h3>Courses I've done</h3>
+    <div class="wrapper">
+      <ul>
+        <li class="box" *ngFor="let course of courses.slice().reverse()">
+          {{course.title}}
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

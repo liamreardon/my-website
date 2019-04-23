@@ -12,9 +12,8 @@ import { timer } from 'rxjs';
 
 export class EducationComponent implements OnInit {
 
-  courses: Course[];
-  errorMessage: string;
-  mode = "Observable"
+  courses: Course[]
+  errorMessage: string
 
   constructor(private courseService: CourseService) { }
 

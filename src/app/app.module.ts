@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { EducationComponent } from './components/education/education.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
@@ -19,7 +18,6 @@ import { CourseService } from './services/course.service'
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     EducationComponent,
     HomeComponent,
     ProjectsComponent,

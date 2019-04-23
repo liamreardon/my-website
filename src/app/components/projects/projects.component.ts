@@ -12,7 +12,6 @@ import { timer } from 'rxjs';
 export class ProjectsComponent implements OnInit {
 
   projects: Project[] = []
-  mode = "Observable"
   errorMessage: string
 
   gitURL = "https://github.com/liamreardon";
