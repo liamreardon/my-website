@@ -11,7 +11,7 @@ declare const window: any;
 export class AppComponent {
 
   navColor = 'rgba(46, 49, 49, 0)'
-  navTextColor = 'black'
+  navTextColor = 'red'
 
   @HostListener("window:scroll", [])
     onWindowScroll() {
@@ -22,7 +22,7 @@ export class AppComponent {
         this.navTextColor = 'white'
       } else if (number < 105) {
         this.navColor = 'rgba(46, 49, 49, 0)'
-        this.navTextColor = 'black'
+        this.navTextColor = 'red'
       }
 
     }

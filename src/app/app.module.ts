@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 import { AppComponent } from './app.component';
 import { EducationComponent } from './components/education/education.component';
-import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -28,7 +30,9 @@ import { CourseService } from './services/course.service'
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatGridListModule
   ],
   providers: [
     ProjectService,
