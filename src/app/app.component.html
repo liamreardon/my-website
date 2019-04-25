@@ -1,4 +1,4 @@
-<div class="first-container">
+<div class="first-container" id="navbar">
     <div class="nav-container" [ngStyle]="{'background-color': navColor }">
         <div class="nav-row">
             <div class="nav-logo">
@@ -7,9 +7,9 @@
             </a>
             </div>
             <div class="nav-controls">
-            <a routerLink="/" [ngStyle]="{'color': navTextColor }">Home</a>
-            <a routerLink="/education" [ngStyle]="{'color': navTextColor }">Education</a>
-            <a routerLink="/projects" [ngStyle]="{'color': navTextColor }">Projects</a>
+            <a routerLink="/" [ngStyle]="{'color': navTextColor }" class="active">Home</a>
+            <a routerLink="/education" [ngStyle]="{'color': navTextColor }" class="active">Education</a>
+            <a routerLink="/projects" [ngStyle]="{'color': navTextColor }" class="active">Projects</a>
             </div>
         </div>
     </div>

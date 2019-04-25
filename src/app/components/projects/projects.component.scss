@@ -4,48 +4,41 @@ div {
   margin: auto;
 }
  
-ul {
-  list-style-type: none;
-  width: 500px;;
-  margin: 0 auto;
-}
 
- 
 h3 {
   font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
 }
  
-li img {
+img {
   float: left;
   margin: 0 15px 0 0;
   width: 50%;
 }
  
-li p {
+p {
   font: 200 12px/1.5 Georgia, Times New Roman, serif;
 }
  
-li {
-  padding: 10px;
-  overflow: auto;
-  &:hover {
-    background: #eee;
-    cursor: pointer;
-  }
-  
-}
- 
-
 a {
     text-decoration: none;
     color: black;
+    &:hover {
+      background: #eee;
+      cursor: pointer;
+    }
 }
 
 .container {
   margin-top: 120px;
 }
 
-
-h1 {
-  text-align: center;
+.col-md-6 {
+  position:relative;
+  width:200px;
+  overflow-x:scroll;
 }
+
+
+
+
+
