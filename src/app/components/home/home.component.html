@@ -3,8 +3,11 @@
   <h3>Software Engineer currently living
      in St. John's, Newfoundland</h3>
   <img [src]="'assets/img/IMG_1873.jpg'" alt="image">
+  <a class="scroll-btn" (click)="scroll(target)">
+    <img [src]="'assets/img/arrow-down.png'">
+  </a>
 </div>
-<div class="container">
+<div #target class="container">
   <div style="text-align:center">
     <body>
       <h2>TEST</h2>
