@@ -32,21 +32,9 @@ h2, h3, p {
 div {
   margin: auto;
 }
- 
-ul {
-  width: 500px;
-  margin: 0 auto;
-  
-}
- 
-li {
-  padding: 10px;
-  overflow: auto;
-  margin: 0 0 3px 0;
-  &:hover {
-    background: red;
-  }
-  
+
+mat-grid-tile {
+  background-color: red;
 }
 
 
