@@ -64,9 +64,11 @@ h2 {
   .projects {
     background-color: #151515;
 
+
     h1 {
         color: white;
-        padding-top: 125px
+        padding-top: 125px;
+        text-align: center;
     }
 
     h2, h3, h4 {
@@ -78,13 +80,45 @@ h2 {
     }
   }
 
-  i {
-      color: white;
-  }
+i {
+    color: white;
+}
 
-  #pointer {
-      font-size: 50px;
-  }
+#pointer {
+    font-size: 50px;
+}
+
+#projects-icon {
+    font-size: 200px;
+}
+
+.projects-link {
+    width: 400px;
+    height: 400px;
+    margin-top: 10%;
+    background-color: red;
+}
+
+
+#projects-link {
+    margin: 0 auto;
+    margin-top: 7%;
+}
+
+.edu-body {
+  
+}
+
+.edu {
+    h1 {
+        text-align: center;
+        padding-top: 125px;
+    }
+}
+
+
+
+
 
   
 

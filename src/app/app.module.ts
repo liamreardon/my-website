@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { EducationComponent } from './components/education/education.component';
@@ -32,7 +33,8 @@ import { CourseService } from './services/course.service'
     AngularFontAwesomeModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCardModule
   ],
   providers: [
     ProjectService,
