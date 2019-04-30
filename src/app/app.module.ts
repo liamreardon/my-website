@@ -10,7 +10,6 @@ import { EducationComponent } from './components/education/education.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HttpClientModule } from '@angular/common/http';
@@ -24,8 +23,7 @@ import { CourseService } from './services/course.service'
     EducationComponent,
     HomeComponent,
     ProjectsComponent,
-    FooterComponent,
-    SidebarComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,

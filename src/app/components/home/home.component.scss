@@ -78,6 +78,7 @@ h2 {
     body {
         background-color: #151515;
     }
+
   }
 
 i {
@@ -90,19 +91,31 @@ i {
 
 #projects-icon {
     font-size: 200px;
+    margin-top: 10%;
 }
 
 .projects-link {
     width: 400px;
     height: 400px;
     margin-top: 10%;
-    background-color: red;
+    background-color: #d91e18;
 }
 
 
 #projects-link {
     margin: 0 auto;
     margin-top: 7%;
+    transition: opacity .2s linear;
+    &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+        transition: opacity .2s linear;
+      }
+      
+      &:visited {
+        color: inherit;
+        text-decoration: none;
+      }
 }
 
 .edu-body {
@@ -116,6 +129,51 @@ i {
     }
 }
 
+#txt {
+    margin-top: 20%;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    transition: opacity .125s linear;
+    
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+      transition: opacity .125s linear;
+    }
+    
+    &:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    
+}
+
+.edu-link {
+    width: 400px;
+    height: 400px;
+    margin-top: 10%;
+    background-color: #5333ed;
+}
+
+
+#edu-link {
+    margin: 0 auto;
+    margin-top: 7%;
+    transition: opacity .2s linear;
+    &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+        transition: opacity .2s linear;
+      }
+      
+    &:visited {
+        color: inherit;
+        text-decoration: none;
+    }
+}
 
 
 
