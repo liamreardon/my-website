@@ -1,15 +1,31 @@
 <div class="landImg">
-  <h1>Hey, I'm Liam!</h1>
-  <h3>Software Engineer currently living
+  <h1 class="animated fadeInLeft">Hey, I'm Liam!</h1>
+  <h3 class="animated fadeInLeft">Software Engineer currently living
      in St. John's, Newfoundland</h3>
   <img [src]="'assets/img/IMG_1873.jpg'" alt="image">
+  <a class="scroll-btn" (click)="scrollToProjects(1000)">
+    <i class="far fa-hand-point-down animated fadeInUp" id="pointer"></i>
+  </a>
 </div>
-<div class="container">
-  <div style="text-align:center">
-    <body>
-      <h2>TEST</h2>
-      <h3>TEST2</h3>
-      <h4>TEST3</h4>
-    </body>
+<div class="projects" id="projects" style="height: 800px;">
+  <div class="container">
+      <h1>projects i've worked on</h1>
+      <div class="bio-body" style="text-align:center">
+          <div class="projects-link" id="projects-link" routerLink="/projects"> 
+                <i class="fas fa-code" id="projects-icon"></i>
+                <h3 id="txt">(click)</h3>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="edu" id="edu" style="height: 800px;">
+  <div class="container">
+      <h1>what i've been studying</h1>
+      <div class="edu-body" style="text-align:center">
+          <div class="edu-link" id="edu-link" routerLink="/education"> 
+              <i class="fas fa-book" id="projects-icon"></i>
+              <h3 id="txt">(click)</h3>
+          </div>
+      </div>
   </div>
 </div>

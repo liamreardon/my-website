@@ -3,23 +3,30 @@
         <div class="nav-row">
             <div class="nav-logo">
             <a routerLink="/" [ngStyle]="{'color': navTextColor }">
-                LIAM REARDON
+                // LIAM REARDON //
             </a>
             </div>
             <div class="nav-controls">
-            <a routerLink="/" [ngStyle]="{'color': navTextColor }" class="active">Home</a>
-            <a routerLink="/education" [ngStyle]="{'color': navTextColor }" class="active">Education</a>
-            <a routerLink="/projects" [ngStyle]="{'color': navTextColor }" class="active">Projects</a>
+            <a routerLink="/" routerLinkActive="active" [ngStyle]="{'color': navTextColor }">01. Home</a>
+            <a routerLink="/projects" routerLinkActive="active" [ngStyle]="{'color': navTextColor }">02. Projects</a>
+            <a routerLink="/education" routerLinkActive="active" [ngStyle]="{'color': navTextColor }">03. Education</a>
+            <a href="mailto:me@liamreardon.io" [ngStyle]="{'color': navTextColor }">04. Contact</a>
             </div>
         </div>
     </div>
 </div>
 <div class="sidebar">
-    <app-sidebar></app-sidebar>
+    <div class="sidenav">
+        <a href="{{ linkedURL }}"><fa name="linkedin-square" aria-hidden="true" id="linkedIn"></fa></a>
+        <a href="{{ gitURL }}"><fa name="github" aria-hidden="true" id="git"></fa></a>
+        <a href="{{ twitterURL }}"><fa name="twitter" aria-hidden="true" id="twitter"></fa></a>
+        <a href="{{ spotify }}"><fa name="spotify" aria-hidden="true" id="spotify"></fa></a>
+        <a href="{{ email }}"><fa name="paper-plane" aria-hidden="true" id="email"></fa></a>
+      </div>
 </div>
-<div class="router">
+<main class="animated fadeIn">
     <router-outlet></router-outlet>
-</div>
+</main>
 <div class="footer">
     <app-footer></app-footer>
 </div>
