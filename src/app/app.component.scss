@@ -85,3 +85,12 @@
     transition: opacity .125s linear;
   }
 }
+
+
+router-outlet ~ * {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+

@@ -7,9 +7,9 @@
             </a>
             </div>
             <div class="nav-controls">
-            <a routerLink="/" routerLinkActive="active" [ngStyle]="{'color': navTextColor }">01. Home</a>
-            <a routerLink="/projects" routerLinkActive="active" [ngStyle]="{'color': navTextColor }">02. Projects</a>
-            <a routerLink="/education" routerLinkActive="active" [ngStyle]="{'color': navTextColor }">03. Education</a>
+            <a routerLink="/" routerActive="active" [ngStyle]="{'color': navTextColor }">01. Home</a>
+            <a routerLink="/projects" routerActive="active" [ngStyle]="{'color': navTextColor }">02. Projects</a>
+            <a routerLink="/education" routerActive="active" [ngStyle]="{'color': navTextColor }">03. Education</a>
             <a href="mailto:me@liamreardon.io" [ngStyle]="{'color': navTextColor }">04. Contact</a>
             </div>
         </div>
@@ -24,8 +24,8 @@
         <a href="{{ email }}"><fa name="paper-plane" aria-hidden="true" id="email"></fa></a>
       </div>
 </div>
-<main class="animated fadeIn">
-    <router-outlet></router-outlet>
+<main [@fadeAnimation]="getRouterOutletState(o)">
+    <router-outlet #o="outlet"></router-outlet>
 </main>
 <div class="footer">
     <app-footer></app-footer>

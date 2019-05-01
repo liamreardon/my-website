@@ -1,25 +1,42 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HostListener } from "@angular/core";
+import { fadeAnimation } from './animations';
+import { Router, NavigationEnd } from '@angular/router';
 
 declare const window: any;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [fadeAnimation]
 })
 export class AppComponent {
+  
 
   navColor = 'rgba(46, 49, 49, 0)'
   navTextColor = '#d91e18'
 
-  // prepareRoute(outlet: RouterOutlet) {
-  //   return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
-  // }
+  linkedURL = "https://www.linkedin.com/in/liam-reardon-0b74a9159";
+  gitURL = "https://github.com/liamreardon";
+  twitterURL = "https://twitter.com/lreardon22";
+  email = "mailto:me@liamreardon.io";
+  spotify = "https://open.spotify.com/user/12185352237?si=03vv6ZlHTUGiofZRbddlTw";
 
-  // getState(outlet) {
-  //   return outlet.activatedRouteData.state;
-  // }
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+    this.router.events.subscribe((evt) => {
+        if (!(evt instanceof NavigationEnd)) {
+            return;
+        }
+        window.scrollTo(0, 0)
+    });
+  }   
+
+  public getRouterOutletState(outlet) {
+    return outlet.isActivated ? outlet.activatedRoute : '';
+  }
 
   @HostListener("window:scroll", [])
     onWindowScroll() {
