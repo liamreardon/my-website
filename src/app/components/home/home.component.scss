@@ -104,7 +104,10 @@ i {
 
 #projects-link {
     margin: 0 auto;
+    width: 400px;
+    height: 400px;
     margin-top: 7%;
+    background-color: #d91e18;
     transition: opacity .2s linear;
     &:hover {
         opacity: 0.7;
@@ -112,15 +115,12 @@ i {
         transition: opacity .2s linear;
       }
       
-      &:visited {
+    &:visited {
         color: inherit;
         text-decoration: none;
-      }
+    }
 }
 
-.edu-body {
-  
-}
 
 .edu {
     h1 {
@@ -135,33 +135,29 @@ i {
 }
 
 a {
-    text-decoration: none;
-    transition: opacity .125s linear;
-    
-    &:hover {
-      opacity: 0.5;
-      cursor: pointer;
-      transition: opacity .125s linear;
-    }
-    
-    &:visited {
-      color: inherit;
-      text-decoration: none;
-    }
-    
-}
-
-.edu-link {
-    width: 400px;
     height: 400px;
-    margin-top: 10%;
-    background-color: #5333ed;
-}
+    width: 400px;
+    text-decoration: none;
+    transition: opacity .2s linear;
+    &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+        transition: opacity .2s linear;
+      }
+      
+    &:visited {
+        color: inherit;
+        text-decoration: none;
+    }
 
+}
 
 #edu-link {
     margin: 0 auto;
+    width: 400px;
+    height: 400px;
     margin-top: 7%;
+    background-color: #5333ed;
     transition: opacity .2s linear;
     &:hover {
         opacity: 0.7;

@@ -11,7 +11,7 @@ declare const window: any;
 export class AppComponent {
 
   navColor = 'rgba(46, 49, 49, 0)'
-  navTextColor = 'red'
+  navTextColor = '#d91e18'
 
   // prepareRoute(outlet: RouterOutlet) {
   //   return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
@@ -28,10 +28,10 @@ export class AppComponent {
       console.log(number)
       if (number > 105) {
         this.navColor = '#f3f1ef'
-        this.navTextColor = 'red'
+        this.navTextColor = '#d91e18'
       } else if (number < 105) {
         this.navColor = 'rgba(46, 49, 49, 0)'
-        this.navTextColor = 'red'
+        this.navTextColor = '#d91e18'
       }
     }
   

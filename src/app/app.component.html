@@ -17,14 +17,14 @@
 </div>
 <div class="sidebar">
     <div class="sidenav">
-        <a href="{{ linkedURL }}"><fa name="linkedin-square" aria-hidden="true"></fa></a>
-        <a href="{{ gitURL }}"><fa name="github" aria-hidden="true"></fa></a>
-        <a href="{{ twitterURL }}"><fa name="twitter" aria-hidden="true"></fa></a>
-        <a href="{{ spotify }}"><fa name="spotify" aria-hidden="true"></fa></a>
-        <a href="{{ email }}"><fa name="paper-plane" aria-hidden="true"></fa></a>
+        <a href="{{ linkedURL }}"><fa name="linkedin-square" aria-hidden="true" id="linkedIn"></fa></a>
+        <a href="{{ gitURL }}"><fa name="github" aria-hidden="true" id="git"></fa></a>
+        <a href="{{ twitterURL }}"><fa name="twitter" aria-hidden="true" id="twitter"></fa></a>
+        <a href="{{ spotify }}"><fa name="spotify" aria-hidden="true" id="spotify"></fa></a>
+        <a href="{{ email }}"><fa name="paper-plane" aria-hidden="true" id="email"></fa></a>
       </div>
 </div>
-<main>
+<main class="animated fadeIn">
     <router-outlet></router-outlet>
 </main>
 <div class="footer">
