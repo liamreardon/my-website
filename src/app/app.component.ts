@@ -17,12 +17,6 @@ export class AppComponent {
   navColor = 'rgba(46, 49, 49, 0)'
   navTextColor = '#d91e18'
 
-  linkedURL = "https://www.linkedin.com/in/liam-reardon-0b74a9159";
-  gitURL = "https://github.com/liamreardon";
-  twitterURL = "https://twitter.com/lreardon22";
-  email = "mailto:me@liamreardon.io";
-  spotify = "https://open.spotify.com/user/12185352237?si=03vv6ZlHTUGiofZRbddlTw";
-
   constructor(private router: Router) { }
 
   ngOnInit() {
@@ -44,7 +38,7 @@ export class AppComponent {
       const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
       console.log(number)
       if (number > 105) {
-        this.navColor = '#f3f1ef'
+        this.navColor = 'white'
         this.navTextColor = '#d91e18'
       } else if (number < 105) {
         this.navColor = 'rgba(46, 49, 49, 0)'

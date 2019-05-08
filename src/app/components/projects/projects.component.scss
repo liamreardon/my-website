@@ -12,8 +12,10 @@ h3 {
 img {
   float: left;
   margin: 0 15px 0 0;
-  width: 50%;
   -webkit-filter: brightness(100%);
+  width: 250px;
+  height: 250px;
+
 }
  
 p {
@@ -23,17 +25,6 @@ p {
 a {
     text-decoration: none;
     color: black;
-    &:hover {
-      background: #eee;
-      cursor: pointer;
-      -webkit-filter: brightness(80%);
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-      
-    }
 }
 
 .container {
@@ -44,6 +35,22 @@ a {
   position:relative;
   width:200px;
   overflow-x:scroll;
+}
+
+ul {
+  list-style: none;
+  transition: transform .2s;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+li {
+  padding: 35px;
+}
+
+.project-card {
+  max-width: 400px;
 }
 
 
