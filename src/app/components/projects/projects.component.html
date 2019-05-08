@@ -1,22 +1,26 @@
-<div class="container">
-    <h1>PROJECTS</h1>
-</div>
-    
-<div class="container">
-    <ul *ngFor="let project of projects">
-        <li>
-            <mat-card class="project-card">
-                    <a href="{{ project.link }}">
-                        <img mat-card-image src="{{ project.img }}">
-                        <mat-card-title>{{ project.title }}</mat-card-title>
-                        <mat-card-subtitle>{{project.tools}}</mat-card-subtitle>
-                        <mat-card-content>
-                            <p>{{ project.description }}</p>
-                        </mat-card-content>
+<div class="projects-body">
+    <div class="container header">
+        <h1>PROJECTS</h1>
+    </div>
+    <div class="container body">
+        <ul *ngFor="let project of projects">
+            <li>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ project.img }}" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title"><strong>{{ project.title }}</strong></h5>
+                    <p class="card-text">{{ project.description }}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="list-body">{{ project.tools }}</li>
+                    </ul>
+                    <div class="card-body">
+                    <a href="{{ project.link }}" class="card-link">
+                        <fa name="github" aria-hidden="true" id="git"></fa>
                     </a>
-            </mat-card>
-        </li>
-    </ul>
-
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
-
