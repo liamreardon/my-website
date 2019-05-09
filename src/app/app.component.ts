@@ -15,7 +15,7 @@ export class AppComponent {
   
 
   navColor = 'rgba(46, 49, 49, 0)'
-  navTextColor = '#d91e18'
+  navTextColor = 'white'
 
   constructor(private router: Router) { }
 
@@ -42,8 +42,12 @@ export class AppComponent {
         this.navTextColor = '#d91e18'
       } else if (number < 105) {
         this.navColor = 'rgba(46, 49, 49, 0)'
-        this.navTextColor = '#d91e18'
+        this.navTextColor = 'white'
       }
+    }
+
+    changeNavTextColor() {
+      
     }
   
 }

@@ -23,8 +23,10 @@ a {
 }
 
 .header {
-  padding-top: 140px;
+  padding-top: 110px;
+  padding-bottom: 110px;
   text-align: center;
+  background: #151515;
 }
 
 img {
@@ -41,13 +43,19 @@ img {
 }
 
 .body {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 69px;
+  padding-bottom: 69px;
 }
 
 .projects-body {
-  // background: #f2f1ef;
+  background: white;
 }
+
+h1 {
+  color: white;
+}
+
+
 
 
 
