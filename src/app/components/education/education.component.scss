@@ -1,6 +1,10 @@
-h1, h2, h3, p {
+h2, h3, p {
     text-align: center;
-    color: white;
+    color: black;
+}
+
+h1 {
+  color: white;
 }
 
 div {
@@ -15,30 +19,47 @@ mat-grid-tile {
     cursor: pointer;
 
     h3 {
-      color: red;
+      color: white;
     }
   }
 }
 
 .body {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 69px;
+  padding-bottom: 69px;
 }
 
 .header {
-  padding-top: 140px;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  background: #151515;
   text-align: center;
 }
 
 h3 {
   padding: 500px;
-  color: white;
+  color: black;
 }
 
 .education-body {
-  background: #151515;
+  background: #eeb208;
 }
 
 p {
   font-size: 20px;
+}
+
+.degree {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: white;
+}
+
+img {
+  position: relative;
+  height: 91px;
+  width: 120px;
+  float: right;
+  margin-top: -7%;
+  margin-right: 23%;
 }
