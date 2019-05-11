@@ -1,50 +1,66 @@
-* {margin: 0; padding: 0;}
- 
-div {
-  margin: auto;
+ul {
+  list-style: none;
+  display: inline-block;
+  background: green;
 }
- 
 
-h3 {
-  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+.card-link {
+  color: white;
+  background: #359bc5;
+  padding: 10px;
+  text-align: center;
 }
- 
-img {
-  float: left;
-  margin: 0 15px 0 0;
-  width: 50%;
-  -webkit-filter: brightness(100%);
-}
- 
-p {
-  font: 200 12px/1.5 Georgia, Times New Roman, serif;
-}
- 
+
 a {
-    text-decoration: none;
-    color: black;
-    &:hover {
-      background: #eee;
-      cursor: pointer;
-      -webkit-filter: brightness(80%);
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-      
-    }
+  font-size: 35px;
+  display: block;
+  width: 70px;
+  transition: opacity .125s linear;
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity .125s linear;
+  }
+}
+
+.header {
+  padding-top: 110px;
+  padding-bottom: 110px;
+  text-align: center;
+  background: #151515;
+}
+
+img {
+  height: 17.9rem;
+  width: 17.9rem;
+}
+
+.card-body {
+  height: 120px;
+}
+
+#list-body {
+  height: 70px;
+}
+
+.body {
+  padding-top: 69px;
+  padding-bottom: 69px;
+}
+
+.projects-body {
+  background: white;
+}
+
+h1 {
+  color: white;
 }
 
 .container {
-  margin-top: 120px;
+  background: red;
 }
 
-.col-md-6 {
-  position:relative;
-  width:200px;
-  overflow-x:scroll;
-}
+
 
 
 

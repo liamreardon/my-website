@@ -1,13 +1,17 @@
-<h2>Memorial University of Newfoundland</h2>
-<p>B.Sc., Computer Science</p>
-<hr>
-<h3>Courses I've done</h3>
-
-<div class="container">
-  <mat-grid-list cols="2" rowHeight="2:1">
-      <mat-grid-tile *ngFor="let course of courses.slice().reverse()">
-        <h3>{{ course.title }}</h3>
-        <p>description</p>
-      </mat-grid-tile>
-  </mat-grid-list>
+<div class="education-body">
+  <div class="header">
+      <h1>EDUCATION</h1>
+  </div>
+  <div class="degree">
+    <h2>Memorial University of Newfoundland</h2>
+    <p>B.Sc., Computer Science</p>
+    <img [src]="'assets/img/mun.png'" alt="image">
+  </div>
+  <div class="container body">
+      <mat-grid-list cols="2" rowHeight="2:1" class="animated bounceInDown">
+          <mat-grid-tile *ngFor="let course of courses.slice().reverse()">
+            <h3><strong>{{ course.title }}</strong></h3>
+          </mat-grid-tile>
+      </mat-grid-list>
+  </div>
 </div>

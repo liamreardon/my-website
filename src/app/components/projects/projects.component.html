@@ -1,16 +1,26 @@
-<div class="container">
-    <h1>PROJECTS</h1>
+<div class="projects-body">
+    <div class="header">
+        <h1>PROJECTS</h1>
+    </div>
+    <div class="container body animated bounceInDown">
+        <ul *ngFor="let project of projects">
+            <li>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{ project.img }}" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title"><strong>{{ project.title }}</strong></h5>
+                    <p class="card-text">{{ project.description }}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                    <li class="list-group-item" id="list-body">{{ project.tools }}</li>
+                    </ul>
+                    <div class="card-body">
+                    <a href="{{ project.link }}" class="card-link">
+                        <fa name="github" aria-hidden="true" id="git"></fa>
+                    </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
-    
-<div class="container">
-    <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile *ngFor="let project of projects">
-            <a href="{{ project.link }}">
-                <img src="{{ project.img }}">
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.description }}</p>
-            </a>
-        </mat-grid-tile>
-    </mat-grid-list>
-</div>
-

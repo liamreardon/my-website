@@ -6,8 +6,11 @@ h2 {
 
 .landImg {
 
+    position: relative;
+    top: 0;
+    z-index: 0;
+
     img {
-        z-index: 1;
         max-width:100%;
         max-width:100%;
         background-position: center;
@@ -29,13 +32,12 @@ h2 {
         color: white;
         margin-top: -10px; /* 1/2 height */
         text-align: center;
-
     }
 
     h3 {
         z-index: 2;
         position: absolute;
-        top: 43%;
+        top: 40%;
         left: 0;
         right: 0;
         font-size: 35px;
@@ -47,23 +49,26 @@ h2 {
         margin-top: -10px; /* 1/2 height */
         text-align: center;
     }
-
-
 }
 
 .scroll-btn {
     position: absolute;
-    top: 50%;
+    top: 41%;
     left: 50%;
     margin-top: 270px;
     margin-left: -50px;
     width: 100px;
     height: 100px;
+
+    &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+        transition: opacity .125s linear;
+      }
   }
 
   .projects {
     background-color: #151515;
-
 
     h1 {
         color: white;
@@ -108,21 +113,16 @@ i {
     height: 400px;
     margin-top: 7%;
     background-color: #d91e18;
-    transition: opacity .2s linear;
+    transition: transform .2s;
     &:hover {
-        opacity: 0.7;
-        cursor: pointer;
-        transition: opacity .2s linear;
-      }
-      
-    &:visited {
-        color: inherit;
-        text-decoration: none;
+      transform: scale(1.1);
+      cursor: pointer;
     }
 }
 
 
 .edu {
+    background: #F8F8FF;
     h1 {
         text-align: center;
         padding-top: 125px;
@@ -134,23 +134,7 @@ i {
     color: white;
 }
 
-a {
-    height: 400px;
-    width: 400px;
-    text-decoration: none;
-    transition: opacity .2s linear;
-    &:hover {
-        opacity: 0.7;
-        cursor: pointer;
-        transition: opacity .2s linear;
-      }
-      
-    &:visited {
-        color: inherit;
-        text-decoration: none;
-    }
 
-}
 
 #edu-link {
     margin: 0 auto;
@@ -158,16 +142,40 @@ a {
     height: 400px;
     margin-top: 7%;
     background-color: #5333ed;
-    transition: opacity .2s linear;
+    transition: transform .2s;
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    width: 60px;
+    z-index: 10000;
+    position: absolute;
+    top: 30%;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    display: block;
+    transition: opacity .125s linear;
+    background: none;
+}
+
+li a {
+    display: block;
+    padding: 10px;
+    color: white;
     &:hover {
         opacity: 0.7;
         cursor: pointer;
-        transition: opacity .2s linear;
-      }
-      
-    &:visited {
-        color: inherit;
-        text-decoration: none;
+        transition: opacity .125s linear;
     }
 }
 

@@ -1,7 +1,49 @@
 .page-footer {
-    background-color: black;
+    background-color: #000;
 }
 
 .footer-copyright {
     color: white;
+    padding-bottom: 65px;
 }
+
+.footer-top {
+    background-color: #272727
+}
+
+h2 {
+    color: white;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    align-self: center;
+    margin-top: 3%;
+}
+
+.column {
+    flex-grow: 1;
+    padding:1em;
+    text-align: center;
+    display:inline-block;
+    text-decoration: none !important;
+    margin:0 auto;
+
+    a {
+        font-size: 30px;
+        color: white;
+        &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+            transition: opacity .125s linear;
+        }
+    }
+}
+
+#border-left {
+    border-right: 1px solid white;
+}
+
+
