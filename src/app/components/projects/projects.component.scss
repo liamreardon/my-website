@@ -1,12 +1,15 @@
 ul {
   list-style: none;
   display: inline-block;
-  background: green;
+}
+
+#item {
+  margin-left: 13%;
 }
 
 .card-link {
   color: white;
-  background: #359bc5;
+  background: #1dcaff;
   padding: 10px;
   text-align: center;
 }
@@ -40,12 +43,13 @@ img {
 }
 
 #list-body {
-  height: 70px;
+  height: 50px;
+  font-size: 14.5px;
+  font-weight: bolder;
 }
 
 .body {
   padding-top: 69px;
-  padding-bottom: 69px;
 }
 
 .projects-body {
@@ -56,9 +60,7 @@ h1 {
   color: white;
 }
 
-.container {
-  background: red;
-}
+
 
 
 

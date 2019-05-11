@@ -2,6 +2,7 @@
   position: relative;
   top: 0;
   z-index: 10000;
+
 }
 
 .nav-container {
@@ -43,6 +44,8 @@
     .nav-logo {
       display: inline-block;
       font-weight: 900;
+      margin-top: -47px;
+      font-size: 20px;
       a {
         padding-top: 6px;
       }
@@ -66,9 +69,7 @@
   margin: 0 auto;
 }
 
-.nav-logo {
-  font-size: 20px;
-}
+
 
 .sidebar {
   padding: 8px 0;
@@ -83,6 +84,10 @@ router-outlet ~ * {
     height: 100%;
 }
 
+img {
+  height: 160px;
+  width: 129px;
+}
 
 
 

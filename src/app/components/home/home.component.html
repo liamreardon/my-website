@@ -1,7 +1,7 @@
 <div class="landImg">
-  <h1 class="animated bounceInRight">Hey, I'm Liam!</h1>
-  <h3 class="animated bounceInRight">Software Engineer currently living
-     in St. John's, Newfoundland
+  <h1 class="animated bounceInRight">// LIAM REARDON //</h1>
+  <h3 class="animated bounceInRight">software engineer currently living
+     in st. john's, newfoundland
   </h3>
   <img [src]="'assets/img/IMG_1873.jpg'" alt="image">
   <a class="scroll-btn" (click)="scrollToProjects(1000)">
@@ -17,23 +17,47 @@
 </div>
 <div class="projects" id="projects" style="height: 800px;">
   <div class="container">
-      <h1>projects i've worked on</h1>
-      <div class="bio-body" style="text-align:center">
-          <div class="projects-link" id="projects-link" routerLink="/projects" routerActive="active"> 
-              <i class="fas fa-code" id="projects-icon"></i>
-              <h3 id="txt">(click)</h3>
+      <div class="row">
+          <div class="col-sm">
+              <h1>check out my projects</h1>
+              <div class="bio-body" style="text-align:center">
+                  <div class="projects-link" id="projects-link" routerLink="/projects" routerActive="active"> 
+                      <i class="fas fa-code" id="projects-icon"></i>
+                      <h3 id="txt">(click)</h3>
+                  </div>
+              </div>
           </div>
-      </div>
+          <div class="col-sm">
+            <div class="bio-body" id="bio-text" style="text-align:center">
+              <p>with any project i work on, i like to bring a combination of creativity and practical
+                problem solving to the table, as i believe this is the foundation for any
+                great product. 
+              </p>
+            </div>
+          </div>
+        </div>
   </div>
 </div>
 <div class="edu" id="edu" style="height: 800px;">
   <div class="container">
-      <h1>what i've been studying</h1>
-      <div class="edu-body" style="text-align:center">
-          <div class="edu-link" id="edu-link" routerLink="/education" routerActive="active"> 
-              <i class="fas fa-book" id="projects-icon"></i>
-              <h3 id="txt">(click)</h3>
+    <div class="row">
+      <div class="col-sm">
+        <div class="bio-body" id="edu-text" style="text-align:center">
+            <p>i have found the best way to learn is through real world experience and 
+              failure. with that being said, i have learned many valuable lessons in the 
+              classroom. check out some of the relevant courses i've taken!
+            </p>
           </div>
       </div>
+      <div class="col-sm">
+        <h1>what i've been studying</h1>
+        <div class="edu-body" style="text-align:center">
+            <div class="edu-link" id="edu-link" routerLink="/education" routerActive="active"> 
+                <i class="fas fa-book" id="projects-icon"></i>
+                <h3 id="txt">(click)</h3>
+            </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

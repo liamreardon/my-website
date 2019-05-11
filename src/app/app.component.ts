@@ -16,6 +16,7 @@ export class AppComponent {
 
   navColor = 'rgba(46, 49, 49, 0)'
   navTextColor = 'white'
+  logo = "assets/img/LR.png"
 
   constructor(private router: Router) { }
 
@@ -39,15 +40,13 @@ export class AppComponent {
       console.log(number)
       if (number > 105) {
         this.navColor = 'white'
+        this.logo = "assets/img/LR-red.png"
         this.navTextColor = '#d91e18'
       } else if (number < 105) {
         this.navColor = 'rgba(46, 49, 49, 0)'
+        this.logo = "assets/img/LR.png"
         this.navTextColor = 'white'
       }
     }
 
-    changeNavTextColor() {
-      
-    }
-  
 }
