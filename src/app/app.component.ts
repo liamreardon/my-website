@@ -37,12 +37,11 @@ export class AppComponent {
     onWindowScroll() {
 
       const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      console.log(number)
-      if (number > 105) {
+      if (number > 50) {
         this.navColor = 'white'
         this.logo = "assets/img/LR-red.png"
         this.navTextColor = '#d91e18'
-      } else if (number < 105) {
+      } else if (number < 50) {
         this.navColor = 'rgba(46, 49, 49, 0)'
         this.logo = "assets/img/LR.png"
         this.navTextColor = 'white'

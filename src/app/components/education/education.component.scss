@@ -27,6 +27,12 @@ mat-grid-tile {
 .body {
   padding-top: 69px;
   padding-bottom: 69px;
+
+  h1 {
+    padding-bottom: 15px;
+    color: white;
+    text-align: right;
+  }
 }
 
 .header {
@@ -61,5 +67,5 @@ img {
   width: 120px;
   float: right;
   margin-top: -7%;
-  margin-right: 23%;
+  margin-right: 21%;
 }

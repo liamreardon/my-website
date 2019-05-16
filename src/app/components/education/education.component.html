@@ -8,6 +8,7 @@
     <img [src]="'assets/img/mun.png'" alt="image">
   </div>
   <div class="container body">
+      <h1>courses i've taken</h1>
       <mat-grid-list cols="2" rowHeight="2:1" class="animated bounceInDown">
           <mat-grid-tile *ngFor="let course of courses.slice().reverse()">
             <h3><strong>{{ course.title }}</strong></h3>
