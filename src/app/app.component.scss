@@ -97,7 +97,7 @@ img {
 }
 
 @media screen and (max-width: 600px) {
-  .nav-container a:not(:first-child) {display: none;}
+  .nav-container {display: none;}
   .nav-container a.icon {
     float: right;
     display: block;

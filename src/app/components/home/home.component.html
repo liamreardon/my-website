@@ -5,17 +5,17 @@
      in St. John's, Newfoundland
   </h3>
   <img [src]="'assets/img/IMG_1873.jpg'" alt="image">
+  <a class="scroll-btn" (click)="scrollToProjects(1000)">
+    <i class="far fa-hand-point-down animated fadeInUp" style="font-size:3vw" (click)="scrollToProjects(1000)" id="pointer"></i>
+  </a>
   <ul class="animated zoomIn">
-    <li><a href="{{ linkedURL }}"><fa name="linkedin-square" aria-hidden="true" id="linkedIn"></fa></a></li>
-    <li><a href="{{ gitURL }}"><fa name="github" aria-hidden="true" id="git"></fa></a></li>
-    <li><a href="{{ twitterURL }}"><fa name="twitter" aria-hidden="true" id="twitter"></fa></a></li>
-    <li><a href="{{ spotify }}"><fa name="spotify" aria-hidden="true" id="spotify"></fa></a></li>
-    <li><a href="{{ email }}"><fa name="paper-plane" aria-hidden="true" id="email"></fa></a></li>
+    <li><a href="{{ linkedURL }}"><fa name="linkedin-square" aria-hidden="true" id="linkedIn" style="font-size: 3vh"></fa></a></li>
+    <li><a href="{{ gitURL }}"><fa name="github" aria-hidden="true" id="git" style="font-size: 3vh"></fa></a></li>
+    <li><a href="{{ twitterURL }}"><fa name="twitter" aria-hidden="true" id="twitter" style="font-size: 3vh"></fa></a></li>
+    <li><a href="{{ spotify }}"><fa name="spotify" aria-hidden="true" id="spotify" style="font-size: 3vh"></fa></a></li>
+    <li><a href="{{ email }}"><fa name="paper-plane" aria-hidden="true" id="email" style="font-size: 3vh"></fa></a></li>
   </ul>
 </div>
-<a class="scroll-btn" (click)="scrollToProjects(1000)">
-  <i class="far fa-hand-point-down animated fadeInUp" style="font-size:3vw" id="pointer"></i>
-</a>
 <div class="projects" id="projects" style="height: 800px;">
   <div class="container">
       <div class="row">
