@@ -10,7 +10,7 @@ import {catchError, map} from 'rxjs/operators';
 })
 export class ProjectService {
 
-  private projectsURL = 'http://localhost:3000/my_projects.json'
+  private projectsURL = 'https://raredon-api.herokuapp.com/my_projects.json'
 
   constructor(private http: HttpClient) {}
 

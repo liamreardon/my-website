@@ -1,10 +1,11 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div class="projects-body">
     <div class="header">
         <h1>PROJECTS</h1>
     </div>
     <div class="container body animated bounceInDown">
         <ul *ngFor="let project of projects">
-            <li>
+            <li id="item">
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="{{ project.img }}" alt="Card image cap">
                     <div class="card-body">
