@@ -1,12 +1,10 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div class="landImg">
-  <h1 class="animated bounceInRight">LIAM REARDON</h1>
-  <h3 class="animated bounceInRight">Software Engineer currently living
+  <h1 class="animated bounceInRight" style="font-size:7vw">LIAM REARDON</h1>
+  <h3 class="animated bounceInRight" style="font-size:1.75vw">Software Engineer currently living
      in St. John's, Newfoundland
   </h3>
   <img [src]="'assets/img/IMG_1873.jpg'" alt="image">
-  <a class="scroll-btn" (click)="scrollToProjects(1000)">
-    <i class="far fa-hand-point-down animated fadeInUp" id="pointer"></i>
-  </a>
   <ul class="animated zoomIn">
     <li><a href="{{ linkedURL }}"><fa name="linkedin-square" aria-hidden="true" id="linkedIn"></fa></a></li>
     <li><a href="{{ gitURL }}"><fa name="github" aria-hidden="true" id="git"></fa></a></li>
@@ -15,6 +13,9 @@
     <li><a href="{{ email }}"><fa name="paper-plane" aria-hidden="true" id="email"></fa></a></li>
   </ul>
 </div>
+<a class="scroll-btn" (click)="scrollToProjects(1000)">
+  <i class="far fa-hand-point-down animated fadeInUp" style="font-size:3vw" id="pointer"></i>
+</a>
 <div class="projects" id="projects" style="height: 800px;">
   <div class="container">
       <div class="row">

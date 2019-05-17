@@ -2,7 +2,6 @@
   position: relative;
   top: 0;
   z-index: 10000;
-
 }
 
 .nav-container {
@@ -10,10 +9,15 @@
   height: 86px;
   width: 100%;
   position: fixed;
+  overflow: hidden;
   background-color: none;
   text-transform: uppercase;
   letter-spacing: 0.025em;
   transition: background-color 0.2s linear;
+
+  .icon {
+    display: none;
+  }
 
   a {
     display: inline-block;
@@ -46,13 +50,16 @@
       font-weight: 900;
       margin-top: -47px;
       font-size: 20px;
+      margin-right: 20% !important;
       a {
         padding-top: 6px;
+        margin-left: -130px;;
       }
     }
     
     .nav-controls {
-      float: right;
+      text-align: center;
+      margin-top: -118px;
       
       a {
         padding-left: 20px;
@@ -87,6 +94,28 @@ router-outlet ~ * {
 img {
   height: 160px;
   width: 129px;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-container a:not(:first-child) {display: none;}
+  .nav-container a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-container.responsive {position: relative;}
+  .nav-container.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav-container.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
 
 
