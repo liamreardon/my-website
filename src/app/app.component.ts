@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { HostListener } from "@angular/core";
 import { fadeAnimation } from './animations';
 import { Router, NavigationEnd } from '@angular/router';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 declare const window: any;
 
@@ -13,12 +16,17 @@ declare const window: any;
 })
 export class AppComponent {
   
-
+  isCollapsed: boolean = true
   navColor = 'rgba(46, 49, 49, 0)'
   navTextColor = 'white'
   logo = "assets/img/LR.png"
 
-  constructor(private router: Router) { }
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  .pipe(
+    map(result => result.matches)
+  );
+
+  constructor(private router: Router, private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit() {
     this.router.events.subscribe((evt) => {
@@ -31,6 +39,15 @@ export class AppComponent {
 
   public getRouterOutletState(outlet) {
     return outlet.isActivated ? outlet.activatedRoute : '';
+  }
+
+  switchClasses() {
+    const el: HTMLElement = document.getElementById('myTopnav');
+    if (el.className === "topnav") {
+      el.className += "responsive";
+    } else {
+      el.className = "topnav";
+    }
   }
 
   @HostListener("window:scroll", [])
