@@ -14,12 +14,31 @@ declare const window: any;
   styleUrls: ['./app.component.scss'],
   animations: [fadeAnimation]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+  @HostListener("window:scroll", [])
+  onWindowScroll() {
+
+    const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    console.log(number)
+    
+    if (number > 50) {
+      this.navColor = 'white'
+      this.logo = "assets/img/LR-red.png"
+      this.navTextColor = '#d91e18'
+    } else if (number < 50) {
+      this.navColor = 'rgba(46, 49, 49, 0)'
+      this.logo = "assets/img/LR.png"
+      this.navTextColor = 'white'
+    }
+
+  }
   
   isCollapsed: boolean = true
   navColor = 'rgba(46, 49, 49, 0)'
   navTextColor = 'white'
   logo = "assets/img/LR.png"
+
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
   .pipe(
@@ -36,33 +55,5 @@ export class AppComponent {
         window.scrollTo(0, 0)
     });
   }   
-
-  public getRouterOutletState(outlet) {
-    return outlet.isActivated ? outlet.activatedRoute : '';
-  }
-
-  switchClasses() {
-    const el: HTMLElement = document.getElementById('myTopnav');
-    if (el.className === "topnav") {
-      el.className += "responsive";
-    } else {
-      el.className = "topnav";
-    }
-  }
-
-  @HostListener("window:scroll", [])
-    onWindowScroll() {
-
-      const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      if (number > 50) {
-        this.navColor = 'white'
-        this.logo = "assets/img/LR-red.png"
-        this.navTextColor = '#d91e18'
-      } else if (number < 50) {
-        this.navColor = 'rgba(46, 49, 49, 0)'
-        this.logo = "assets/img/LR.png"
-        this.navTextColor = 'white'
-      }
-    }
 
 }

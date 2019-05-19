@@ -31,7 +31,6 @@
         [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
         [mode]="(isHandset$ | async) ? 'over' : 'side'"
         [opened]="!(isHandset$ | async)">
-        <mat-toolbar>Menu</mat-toolbar>
         <mat-nav-list>
         <a mat-list-item (click)="drawer.toggle()" routerLink="/" routerActive="active">01. Home</a>
         <a mat-list-item (click)="drawer.toggle()" routerLink="/projects" routerActive="active">02. Projects</a>
@@ -40,7 +39,7 @@
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
-        <mat-toolbar color="primary" id="navToolbar" [ngStyle]="{'color': navTextColor }">
+        <mat-toolbar class="topnav" id="navToolbar" [ngStyle]="{'background-color': navColor }">
             <button
                 type="button"
                 aria-label="Toggle sidenav"
