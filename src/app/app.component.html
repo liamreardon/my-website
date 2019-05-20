@@ -32,10 +32,17 @@
         [mode]="(isHandset$ | async) ? 'over' : 'side'"
         [opened]="!(isHandset$ | async)">
         <mat-nav-list>
-        <a mat-list-item (click)="drawer.toggle()" routerLink="/" routerActive="active">01. Home</a>
-        <a mat-list-item (click)="drawer.toggle()" routerLink="/projects" routerActive="active">02. Projects</a>
-        <a mat-list-item (click)="drawer.toggle()" routerLink="/education" routerActive="active">03. Education</a>
-        <a mat-list-item (click)="drawer.toggle()" href="mailto:me@liamreardon.io" routerActive="active">04. Contact</a>
+            <h3>MENU</h3>
+            <a mat-list-item id="menu-item" (click)="drawer.toggle()" routerLink="/" routerActive="active">01. Home</a>
+            <a mat-list-item id="menu-item" (click)="drawer.toggle()" routerLink="/projects" routerActive="active">02. Projects</a>
+            <a mat-list-item id="menu-item" (click)="drawer.toggle()" routerLink="/education" routerActive="active">03. Education</a>
+            <a mat-list-item id="menu-item" (click)="drawer.toggle()" href="mailto:me@liamreardon.io" routerActive="active">04. Contact</a>
+            <h3>LINKS</h3>
+            <a mat-list-item href="{{ linkedURL }}"><fa name="linkedin-square" aria-hidden="true" id="link"></fa></a>
+            <a mat-list-item href="{{ gitURL }}"><fa name="github" aria-hidden="true" id="link"></fa></a>
+            <a mat-list-item href="{{ twitterURL }}"><fa name="twitter" aria-hidden="true" id="link"></fa></a>
+            <a mat-list-item href="{{ spotify }}"><fa name="spotify" aria-hidden="true" id="link"></fa></a>
+            <a mat-list-item href="{{ email }}"><fa name="paper-plane" aria-hidden="true" id="link"></fa></a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
@@ -46,18 +53,17 @@
                 mat-icon-button
                 (click)="drawer.toggle()"
                 *ngIf="isHandset$ | async">
-                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+                <mat-icon [ngStyle]="{'color': navTextColor }" aria-label="Side nav toggle icon">menu</mat-icon>
             </button>
-            <span>
-                <a routerLink="/" [ngStyle]="{'color': navTextColor }">
-                    <img src="{{ logo }}" alt="">
-                </a>
-            </span>
+            <a routerLink="/" [ngStyle]="{'color': navTextColor }">
+                <img id="nav-logo" src="{{ logo }}" alt="" >
+            </a>
+            <span class="spacer-top"></span>
+            <a routerLink="/" class="nav-link" routerActive="active" [ngStyle]="{'color': navTextColor }">01. Home</a>
+            <a routerLink="/projects" class="nav-link" routerActive="active" [ngStyle]="{'color': navTextColor }">02. Projects</a>
+            <a routerLink="/education" class="nav-link" routerActive="active" [ngStyle]="{'color': navTextColor }">03. Education</a>
             <span class="spacer"></span>
-            <a routerLink="/" routerActive="active" [ngStyle]="{'color': navTextColor }">01. Home</a>
-            <a routerLink="/projects" routerActive="active" [ngStyle]="{'color': navTextColor }">02. Projects</a>
-            <a routerLink="/education" routerActive="active" [ngStyle]="{'color': navTextColor }">03. Education</a>
-            <a href="mailto:me@liamreardon.io" [ngStyle]="{'color': navTextColor }">04. Contact</a>
+            <a href="mailto:me@liamreardon.io" class="nav-link" [ngStyle]="{'color': navTextColor }">04. Contact</a>
         </mat-toolbar>
         <div class="router">
             <router-outlet></router-outlet>
