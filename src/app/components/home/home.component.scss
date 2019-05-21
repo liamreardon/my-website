@@ -66,7 +66,7 @@ h2 {
   }
 
   .projects {
-    background-color: #151515;
+    background: linear-gradient(to left bottom, #151515 60%, #1b1b1b 40%);
 
     h1 {
         color: white;
@@ -121,7 +121,7 @@ i {
 
 
 .edu {
-    background: white;
+    background: linear-gradient(to right bottom, white 60%, #e8ecf1 40%);
     h1 {
         text-align: center;
         padding-top: 125px;
