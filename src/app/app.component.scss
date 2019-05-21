@@ -92,7 +92,7 @@ router-outlet ~ * {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .nav-link {
     display: none !important;
   }
@@ -172,7 +172,7 @@ mat-nav-list {
 }
 
 mat-sidenav {
-  background: #272727;
+  background: #2e3131;
 }
 
 

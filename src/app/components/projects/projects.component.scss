@@ -1,10 +1,12 @@
 ul {
   list-style: none;
   display: inline-block;
+  text-align: center;
 }
 
-#item {
-  margin-left: 13%;
+
+li {
+  text-align: center;
 }
 
 .card-link {
@@ -34,8 +36,8 @@ a {
 }
 
 img {
-  height: 17.9rem;
-  width: 17.9rem;
+  height: 17.87rem;
+  width: 17.87rem;
 }
 
 .card-body {
@@ -61,6 +63,38 @@ h1 {
   color: white;
 }
 
+@media only screen and (max-width: 768px) {
+  ul {
+      margin: auto !important;
+      display: block !important;
+      width: 100%;
+      background: red;
+  }
+
+  #item {
+    margin: auto !important;
+    width: 100% !important;
+    display: block;
+  }
+
+  #card {
+    width: 100%;
+    margin: auto !important;
+  }
+
+
+  .projects-list {
+    display: none;
+  }
+
+  .sm-projects-list {
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+
+
+}
 
 
 

@@ -33,10 +33,10 @@
         [opened]="!(isHandset$ | async)">
         <mat-nav-list>
             <h3>MENU</h3>
-            <a mat-list-item id="menu-item" (click)="drawer.toggle()" routerLink="/" routerActive="active">01. Home</a>
-            <a mat-list-item id="menu-item" (click)="drawer.toggle()" routerLink="/projects" routerActive="active">02. Projects</a>
-            <a mat-list-item id="menu-item" (click)="drawer.toggle()" routerLink="/education" routerActive="active">03. Education</a>
-            <a mat-list-item id="menu-item" (click)="drawer.toggle()" href="mailto:me@liamreardon.io" routerActive="active">04. Contact</a>
+            <a mat-list-item id="menu-item" (click)="drawer.toggle()" routerLink="/" routerActive="active">Home</a>
+            <a mat-list-item id="menu-item" (click)="drawer.toggle()" routerLink="/projects" routerActive="active">Projects</a>
+            <a mat-list-item id="menu-item" (click)="drawer.toggle()" routerLink="/education" routerActive="active">Education</a>
+            <a mat-list-item id="menu-item" (click)="drawer.toggle()" href="mailto:me@liamreardon.io" routerActive="active">Contact</a>
             <h3>LINKS</h3>
             <a mat-list-item href="{{ linkedURL }}"><fa name="linkedin-square" aria-hidden="true" id="link"></fa></a>
             <a mat-list-item href="{{ gitURL }}"><fa name="github" aria-hidden="true" id="link"></fa></a>
@@ -59,11 +59,11 @@
                 <img id="nav-logo" src="{{ logo }}" alt="" >
             </a>
             <span class="spacer-top"></span>
-            <a routerLink="/" class="nav-link" routerActive="active" [ngStyle]="{'color': navTextColor }">01. Home</a>
-            <a routerLink="/projects" class="nav-link" routerActive="active" [ngStyle]="{'color': navTextColor }">02. Projects</a>
-            <a routerLink="/education" class="nav-link" routerActive="active" [ngStyle]="{'color': navTextColor }">03. Education</a>
+            <a routerLink="/" class="nav-link" routerActive="active" [ngStyle]="{'color': navTextColor }">Home</a>
+            <a routerLink="/projects" class="nav-link" routerActive="active" [ngStyle]="{'color': navTextColor }">Projects</a>
+            <a routerLink="/education" class="nav-link" routerActive="active" [ngStyle]="{'color': navTextColor }">Education</a>
             <span class="spacer"></span>
-            <a href="mailto:me@liamreardon.io" class="nav-link" [ngStyle]="{'color': navTextColor }">04. Contact</a>
+            <a href="mailto:me@liamreardon.io" class="nav-link" [ngStyle]="{'color': navTextColor }">Contact</a>
         </mat-toolbar>
         <div class="router">
             <router-outlet></router-outlet>
