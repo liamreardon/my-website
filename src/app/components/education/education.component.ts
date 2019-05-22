@@ -18,7 +18,7 @@ export class EducationComponent implements OnInit {
   constructor(private courseService: CourseService) { }
 
   ngOnInit() {
-    let time = timer(0, 5000)
+    let time = timer(0, 10000)
     time.subscribe(() => this.getDocuments())
   }
   

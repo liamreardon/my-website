@@ -19,7 +19,7 @@ export class ProjectsComponent implements OnInit {
   constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
-    let time = timer(0, 5000)
+    let time = timer(0, 10000)
     time.subscribe(() => this.getDocuments())
   }
   

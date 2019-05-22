@@ -7,7 +7,10 @@ ul {
 
 li {
   text-align: center;
+  width: 100%;
+  align-items: center;
 }
+
 
 .card-link {
   color: white;
@@ -53,6 +56,7 @@ img {
 
 .body {
   padding-top: 69px;
+  padding-bottom: 69px;
 }
 
 .projects-body {
@@ -63,12 +67,19 @@ h1 {
   color: white;
 }
 
+.sm-projects-list {
+  display: none !important;
+}
+
+.projects-list {
+  margin-left: 13.7%;
+}
+
 @media only screen and (max-width: 768px) {
   ul {
       margin: auto !important;
       display: block !important;
       width: 100%;
-      background: red;
   }
 
   #item {
@@ -77,7 +88,7 @@ h1 {
     display: block;
   }
 
-  #card {
+  .card {
     width: 100%;
     margin: auto !important;
   }
@@ -90,6 +101,7 @@ h1 {
   .sm-projects-list {
     display: block !important;
     margin: 0 auto !important;
+    align-items: center;
   }
 
 
