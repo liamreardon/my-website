@@ -9,11 +9,16 @@
     <img [src]="'assets/img/mun.png'" alt="image">
   </div>
   <div class="container body">
-      <h1>courses i've taken</h1>
-      <mat-grid-list cols="2" rowHeight="2:1" class="animated bounceInDown">
+      <h1 class="courses-header">courses i've taken</h1>
+      <mat-grid-list cols="2" rowHeight="2:1" class="nm-list animated bounceInDown">
           <mat-grid-tile *ngFor="let course of courses.slice().reverse()">
             <h3 style="font-size: 2.4vw">{{ course.title }}</h3>
           </mat-grid-tile>
       </mat-grid-list>
+      <mat-grid-list cols="1" rowHeight="2:1" class="sm-list animated bounceInDown">
+        <mat-grid-tile *ngFor="let course of courses.slice().reverse()">
+          <h3>{{ course.title }}</h3>
+        </mat-grid-tile>
+    </mat-grid-list>
   </div>
 </div>

@@ -73,3 +73,33 @@ img {
   margin-top: -7%;
   margin-right: 21%;
 }
+
+.sm-list {
+  display: none;
+}
+
+
+@media only screen and (max-width: 768px) { 
+
+  .sm-list {
+    display: block !important;
+  }
+
+  .nm-list {
+    display: none;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .courses-header {
+    text-align: center !important;
+  }
+
+  img {
+    display: none;
+  }
+
+  
+}
