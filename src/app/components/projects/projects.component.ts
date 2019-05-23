@@ -13,6 +13,7 @@ export class ProjectsComponent implements OnInit {
 
   projects: Project[] = []
   errorMessage: string
+  showSpinner = true
 
   gitURL = "https://github.com/liamreardon";
 
@@ -27,7 +28,8 @@ export class ProjectsComponent implements OnInit {
     this.projectService.getProjects()
         .subscribe(
           documents => this.projects = documents,
-          error => this.errorMessage = <any>error
+          error => this.errorMessage = <any>error,
+          () => this.showSpinner = false
         )
   }
 }

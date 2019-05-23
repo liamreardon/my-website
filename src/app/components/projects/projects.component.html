@@ -2,6 +2,9 @@
 <div class="projects-body">
     <div class="header">
         <h1>PROJECTS</h1>
+        <div class="load-spin">
+            <app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+        </div>
     </div>
     <div class="projects-list container body animated bounceInDown">
         <ul *ngFor="let project of projects">

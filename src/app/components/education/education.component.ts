@@ -14,6 +14,7 @@ export class EducationComponent implements OnInit {
 
   courses: Course[]
   errorMessage: string
+  showSpinner = true
 
   constructor(private courseService: CourseService) { }
 
@@ -26,7 +27,8 @@ export class EducationComponent implements OnInit {
     this.courseService.getCourses()
         .subscribe(
           documents => this.courses = documents,
-          error => this.errorMessage = <any>error
+          error => this.errorMessage = <any>error,
+          () => this.showSpinner = false
         )
   }
 

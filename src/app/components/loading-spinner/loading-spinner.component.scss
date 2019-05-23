@@ -1,66 +1,10 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
-@font-face {
-    font-family: "Gravity-Bold";
-    src: url('assets/fonts/Gravity-Bold.otf');
-}
-
-@font-face {
-    font-family: "Gravity-Regular";
-    src: url('assets/fonts/Gravity-Regular.otf');
-}
-
-@font-face {
-    font-family: "Gravity-Light";
-    src: url('assets/fonts/Gravity-Light.otf');
-}
-
-@font-face {
-    font-family: "Gravity-Book";
-    src: url('assets/fonts/Gravity-Book.otf');
-}
-
-* {
-    font-family: "Gravity-Book";
-}
-
-body {
-    margin: 0;
-}
-
-body {
-    height: 100%;
-}
-
-.loading {
-    opacity: 0;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background: #151515;
-    padding-top: 25vh;
-    text-align: center;
-    z-index: -1;
-    transition: opacity .8s ease-out;
-}
-
-app-root:empty + .loading {
-  opacity: 1;
-  z-index: 100;
-  h1 {
-    font-family: "courier", monospace;
-    color: #EEE;
-    margin-bottom: 50px;
-  }
-}
-
 .spinner {
     margin: 0 auto;
     width: 50px;
     height: 40px;
     text-align: center;
     font-size: 10px;
-}
+  }
   
   .spinner > div {
     background-color: #DD2630;

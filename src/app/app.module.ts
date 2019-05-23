@@ -17,7 +17,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProjectService } from './services/project.service'
 import { CourseService } from './services/course.service';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material'
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
     EducationComponent,
     HomeComponent,
     ProjectsComponent,
-    FooterComponent
+    FooterComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
