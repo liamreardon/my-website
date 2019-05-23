@@ -5,6 +5,9 @@
      in St. John's, Newfoundland
   </h3>
   <img [src]="'assets/img/IMG_1873.jpg'" alt="image">
+  <a class="scroll-btn" (click)="scrollToProjects(1000)">
+    <i class="far fa-hand-point-down animated fadeInUp" style="font-size:3vw" (click)="scrollToProjects(1000)" id="pointer"></i>
+  </a>
   <ul class="animated zoomIn">
     <li><a href="{{ linkedURL }}"><fa name="linkedin-square" aria-hidden="true" id="linkedIn"></fa></a></li>
     <li><a href="{{ gitURL }}"><fa name="github" aria-hidden="true" id="git"></fa></a></li>
@@ -13,51 +16,74 @@
     <li><a href="{{ email }}"><fa name="paper-plane" aria-hidden="true" id="email"></fa></a></li>
   </ul>
 </div>
-<a class="scroll-btn" (click)="scrollToProjects(1000)">
-  <i class="far fa-hand-point-down animated fadeInUp" style="font-size:3vw" id="pointer"></i>
-</a>
 <div class="projects" id="projects" style="height: 800px;">
   <div class="container">
+    <div class="projects-container">
       <div class="row">
           <div class="col-sm">
-              <h1>check out my projects</h1>
+              <h1 style="font-size:2.5vw">check out my projects</h1>
               <div class="bio-body" style="text-align:center">
                   <div class="projects-link" id="projects-link" routerLink="/projects" routerActive="active"> 
-                      <i class="fas fa-code" id="projects-icon"></i>
-                      <h3 id="txt">(click)</h3>
+                      <i style="font-size:15vw" class="fas fa-code" id="projects-icon"></i>
+                      <h3 style="font-size:1.75vw" id="txt">(click)</h3>
                   </div>
               </div>
           </div>
           <div class="col-sm">
             <div class="bio-body" id="bio-text" style="text-align:center">
-              <p>With any project I work on, I like to bring a combination of creativity and practical
+              <p style="font-size:1.5vw" >With any project I work on, I like to bring a combination of creativity and practical
                 problem solving to the table, as I believe this is the blueprint for any
                 great product. 
               </p>
             </div>
           </div>
         </div>
+      </div>
+      <div class="sm-projects-container" style="display: none;">
+        <p>With any project I work on, I like to bring a combination of creativity and practical
+            problem solving to the table, as I believe this is the blueprint for any
+            great product. 
+        </p>
+        <div routerLink="/projects" class="sm-projects-link">
+            <h1>check out my projects</h1>
+            <h3>(click)</h3>
+        </div>
+      </div>
   </div>
 </div>
 <div class="edu" id="edu" style="height: 800px;">
   <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <div class="bio-body" id="edu-text" style="text-align:center">
-            <p>I have found the best way to learn is through real world experience and 
-              failure. With that being said, I have learned many valuable lessons in the 
-              classroom. Check out some of the relevant courses I've taken!
-            </p>
-          </div>
-      </div>
-      <div class="col-sm">
-        <h1>what i've been studying</h1>
-        <div class="edu-body" style="text-align:center">
-            <div class="edu-link" id="edu-link" routerLink="/education" routerActive="active"> 
-                <i class="fas fa-book" id="projects-icon"></i>
-                <h3 id="txt">(click)</h3>
+    <div class="edu-container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="bio-body" id="edu-text" style="text-align:center">
+              <p style="font-size:1.5vw">I have found the best way to learn is through real world experience and 
+                failure. With that being said, I have learned many valuable lessons in the 
+                classroom. Check out some of the relevant courses I've taken!
+              </p>
             </div>
         </div>
+        <div class="col-sm">
+          <h1 style="font-size:2.5vw">what i've been studying</h1>
+          <div class="edu-body" style="text-align:center">
+              <div class="edu-link" id="edu-link" routerLink="/education" routerActive="active"> 
+                  <i style="font-size:15vw" class="fas fa-book" id="projects-icon"></i>
+                  <h3 style="font-size:1.75vw" id="txt">(click)</h3>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sm-edu-container" style="display: none;">
+      <div>
+          <p>I have found the best way to learn is through real world experience and 
+              failure. With that being said, I have learned many valuable lessons in the 
+              classroom. Check out some of the relevant courses I've taken!
+          </p>
+      </div>
+      <div routerLink="/education" class="sm-edu-link">
+          <h1>what i've been studying</h1>
+          <h3>(click)</h3>
       </div>
     </div>
   </div>

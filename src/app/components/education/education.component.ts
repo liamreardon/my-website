@@ -14,11 +14,12 @@ export class EducationComponent implements OnInit {
 
   courses: Course[]
   errorMessage: string
+  showSpinner = true
 
   constructor(private courseService: CourseService) { }
 
   ngOnInit() {
-    let time = timer(0, 5000)
+    let time = timer(0, 10000)
     time.subscribe(() => this.getDocuments())
   }
   
@@ -26,7 +27,8 @@ export class EducationComponent implements OnInit {
     this.courseService.getCourses()
         .subscribe(
           documents => this.courses = documents,
-          error => this.errorMessage = <any>error
+          error => this.errorMessage = <any>error,
+          () => this.showSpinner = false
         )
   }
 

@@ -13,13 +13,14 @@ export class ProjectsComponent implements OnInit {
 
   projects: Project[] = []
   errorMessage: string
+  showSpinner = true
 
   gitURL = "https://github.com/liamreardon";
 
   constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
-    let time = timer(0, 5000)
+    let time = timer(0, 10000)
     time.subscribe(() => this.getDocuments())
   }
   
@@ -27,7 +28,8 @@ export class ProjectsComponent implements OnInit {
     this.projectService.getProjects()
         .subscribe(
           documents => this.projects = documents,
-          error => this.errorMessage = <any>error
+          error => this.errorMessage = <any>error,
+          () => this.showSpinner = false
         )
   }
 }

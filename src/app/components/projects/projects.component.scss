@@ -1,11 +1,16 @@
 ul {
   list-style: none;
   display: inline-block;
+  text-align: center;
 }
 
-#item {
-  margin-left: 13%;
+
+li {
+  text-align: center;
+  width: 100%;
+  align-items: center;
 }
+
 
 .card-link {
   color: white;
@@ -34,8 +39,8 @@ a {
 }
 
 img {
-  height: 17.9rem;
-  width: 17.9rem;
+  height: 17.87rem;
+  width: 17.87rem;
 }
 
 .card-body {
@@ -51,6 +56,7 @@ img {
 
 .body {
   padding-top: 69px;
+  padding-bottom: 69px;
 }
 
 .projects-body {
@@ -61,6 +67,47 @@ h1 {
   color: white;
 }
 
+.sm-projects-list {
+  display: none !important;
+}
+
+.projects-list {
+  margin-left: 13.7%;
+}
+
+
+@media only screen and (max-width: 768px) {
+  ul {
+      margin: auto !important;
+      display: block !important;
+      width: 100%;
+  }
+
+  #item {
+    margin: auto !important;
+    width: 100% !important;
+    display: block;
+  }
+
+  .card {
+    width: 100%;
+    margin: auto !important;
+  }
+
+
+  .projects-list {
+    display: none;
+  }
+
+  .sm-projects-list {
+    display: block !important;
+    margin: 0 auto !important;
+    align-items: center;
+  }
+
+
+
+}
 
 
 

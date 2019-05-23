@@ -2,32 +2,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<div class="first-container" id="navbar">
-    <div class="nav-container" [ngStyle]="{'background-color': navColor }">
-        <div class="nav-row">
-            <div class="nav-logo">
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav 
+        #drawer 
+        class="sidenav"
+        [ngClass]="{ hidden: !(isHandset$ | async) }"
+        fixedInViewport="false"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="!(isHandset$ | async)">
+        <mat-nav-list>
+            <h3>MENU</h3>
+            <a mat-list-item id="menu-item" (click)="drawer.toggle()" routerLink="/" routerActive="active">Home</a>
+            <a mat-list-item id="menu-item" (click)="drawer.toggle()" routerLink="/projects" routerActive="active">Projects</a>
+            <a mat-list-item id="menu-item" (click)="drawer.toggle()" routerLink="/education" routerActive="active">Education</a>
+            <a mat-list-item id="menu-item" (click)="drawer.toggle()" href="mailto:me@liamreardon.io" routerActive="active">Contact</a>
+            <h3>LINKS</h3>
+            <a mat-list-item href="{{ linkedURL }}"><fa name="linkedin-square" aria-hidden="true" id="link"></fa></a>
+            <a mat-list-item href="{{ gitURL }}"><fa name="github" aria-hidden="true" id="link"></fa></a>
+            <a mat-list-item href="{{ twitterURL }}"><fa name="twitter" aria-hidden="true" id="link"></fa></a>
+            <a mat-list-item href="{{ spotify }}"><fa name="spotify" aria-hidden="true" id="link"></fa></a>
+            <a mat-list-item href="{{ email }}"><fa name="paper-plane" aria-hidden="true" id="link"></fa></a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar class="topnav" id="navToolbar" [ngStyle]="{'background-color': navColor }">
+            <button
+                type="button"
+                aria-label="Toggle sidenav"
+                mat-icon-button
+                (click)="drawer.toggle()"
+                *ngIf="isHandset$ | async">
+                <mat-icon [ngStyle]="{'color': navTextColor }" aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
             <a routerLink="/" [ngStyle]="{'color': navTextColor }">
-                <img src="{{ logo }}" alt="">
+                <img id="nav-logo" src="{{ logo }}" alt="" >
             </a>
-            </div>
-            <div class="nav-controls">
-            <a routerLink="/" routerActive="active" [ngStyle]="{'color': navTextColor }">01. Home</a>
-            <a routerLink="/projects" routerActive="active" [ngStyle]="{'color': navTextColor }">02. Projects</a>
-            <a routerLink="/education" routerActive="active" [ngStyle]="{'color': navTextColor }">03. Education</a>
-            <a href="mailto:me@liamreardon.io" [ngStyle]="{'color': navTextColor }">04. Contact</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-            </div>
+            <span class="spacer-top"></span>
+            <a routerLink="/" class="nav-link" routerActive="active" [ngStyle]="{'color': navTextColor }">Home</a>
+            <a routerLink="/projects" class="nav-link" routerActive="active" [ngStyle]="{'color': navTextColor }">Projects</a>
+            <a routerLink="/education" class="nav-link" routerActive="active" [ngStyle]="{'color': navTextColor }">Education</a>
+            <span class="spacer"></span>
+            <a href="mailto:me@liamreardon.io" class="nav-link" [ngStyle]="{'color': navTextColor }">Contact</a>
+        </mat-toolbar>
+        <div class="router">
+            <router-outlet></router-outlet>
         </div>
-    </div>
-</div>
-<div class="router">
-    <router-outlet></router-outlet>
-</div>
-<div class="footer">
-    <app-footer></app-footer>
-</div>
+        <div class="footer">
+            <app-footer></app-footer>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
 
 
 
