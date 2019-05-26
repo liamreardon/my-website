@@ -1,8 +1,9 @@
 ul {
   list-style: none;
-  display: inline-block;
+  display: block;
   text-align: center;
 }
+
 
 
 li {
@@ -10,6 +11,11 @@ li {
   width: 100%;
   align-items: center;
 }
+
+mat-grid-tile {
+  outline: solid 1px black;
+}
+
 
 
 .card-link {
@@ -20,14 +26,13 @@ li {
 }
 
 a {
-  font-size: 35px;
-  display: block;
-  width: 70px;
-  transition: opacity .125s linear;
+  // font-size: 35px;
+  // display: block;
+  // width: 70px;
+  transition: transform .2s;
   &:hover {
-    opacity: 0.5;
+    transform: scale(1.1);
     cursor: pointer;
-    transition: opacity .125s linear;
   }
 }
 
@@ -41,6 +46,11 @@ a {
 img {
   height: 17.87rem;
   width: 17.87rem;
+  display: block;
+}
+
+h5 {
+  display: block;
 }
 
 .card-body {
@@ -50,7 +60,6 @@ img {
 #list-body {
   height: 69px;
   font-size: 14.5px;
-  font-weight: bolder;
   
 }
 
@@ -76,6 +85,8 @@ h1 {
 }
 
 
+
+
 @media only screen and (max-width: 768px) {
   ul {
       margin: auto !important;
@@ -92,6 +103,10 @@ h1 {
   .card {
     width: 100%;
     margin: auto !important;
+  }
+
+  .nm-list {
+    display: none;
   }
 
 

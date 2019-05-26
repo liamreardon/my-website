@@ -6,7 +6,7 @@
             <app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
         </div>
     </div>
-    <div class="projects-list container body animated bounceInDown">
+    <!-- <div class="projects-list container body animated bounceInDown">
         <ul *ngFor="let project of projects">
             <li id="item">
                 <div class="card" style="width: 18rem;">
@@ -26,7 +26,17 @@
                 </div>
             </li>
         </ul>
-    </div>
+    </div> -->
+    <mat-grid-list cols="3" rowHeight="1:1" class="nm-list animated bounceInDown">
+        <mat-grid-tile *ngFor="let project of projects">
+          <a href="{{ project.link }}">
+            <img src="{{ project.img }}">
+          </a>
+          <!-- <h5 class="card-title"><strong>{{ project.title }}</strong></h5>
+          <p class="card-text">{{ project.description }}</p>
+          <li>{{ project.tools }}</li> -->
+        </mat-grid-tile>
+    </mat-grid-list>
     <div class="sm-projects-list container body animated bounceInDown">
         <div *ngFor="let project of projects" class="card" style="width: 18rem;">
             <img class="card-img-top" src="{{ project.img }}" alt="Card image cap">
