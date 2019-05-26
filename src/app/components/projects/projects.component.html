@@ -27,11 +27,20 @@
             </li>
         </ul>
     </div> -->
-    <mat-grid-list cols="3" rowHeight="1:1" class="nm-list animated bounceInDown">
+    <mat-grid-list cols="3" rowHeight="500px" class="nm-list animated bounceInDown">
         <mat-grid-tile *ngFor="let project of projects">
+            <mat-grid-tile-header>
+                {{ project.title }}
+            </mat-grid-tile-header>
           <a href="{{ project.link }}">
             <img src="{{ project.img }}">
+            <div class="description">
+                {{ project.description }}
+            </div>
           </a>
+          <mat-grid-tile-footer>
+            {{ project.tools }}
+        </mat-grid-tile-footer>
           <!-- <h5 class="card-title"><strong>{{ project.title }}</strong></h5>
           <p class="card-text">{{ project.description }}</p>
           <li>{{ project.tools }}</li> -->

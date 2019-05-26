@@ -5,7 +5,6 @@ ul {
 }
 
 
-
 li {
   text-align: center;
   width: 100%;
@@ -14,9 +13,22 @@ li {
 
 mat-grid-tile {
   outline: solid 1px black;
+  a {
+    transition: transform .125s;
+    text-decoration: none;
+    color: black;
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
 }
 
-
+.description {
+  padding-top: 7px;
+  text-align: center;
+  width: 17.87rem;
+}
 
 .card-link {
   color: white;
@@ -25,16 +37,6 @@ mat-grid-tile {
   text-align: center;
 }
 
-a {
-  // font-size: 35px;
-  // display: block;
-  // width: 70px;
-  transition: transform .2s;
-  &:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-}
 
 .header {
   padding-top: 110px;
@@ -49,9 +51,18 @@ img {
   display: block;
 }
 
-h5 {
-  display: block;
+
+mat-grid-tile-header {
+  background: white !important;
+  color: black !important;
+  font-size: 23px;
+  text-align: center
 }
+
+mat-grid-tile-footer {
+
+}
+
 
 .card-body {
   height: 135px;
@@ -78,12 +89,18 @@ h1 {
 
 .sm-projects-list {
   display: none !important;
+  a {
+    font-size: 35px;
+    display: block;
+    width: 70px;
+    transition: opacity .125s linear;
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+      transition: opacity .125s linear;
+    }
+  }
 }
-
-.projects-list {
-  margin-left: 13.7%;
-}
-
 
 
 
