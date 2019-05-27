@@ -14,9 +14,9 @@ li {
 mat-grid-tile {
   outline: solid 1px black;
   a {
-    transition: transform .125s;
     text-decoration: none;
     color: black;
+    transition: transform .1s;
     &:hover {
       transform: scale(1.1);
       cursor: pointer;

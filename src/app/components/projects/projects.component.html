@@ -6,27 +6,6 @@
             <app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
         </div>
     </div>
-    <!-- <div class="projects-list container body animated bounceInDown">
-        <ul *ngFor="let project of projects">
-            <li id="item">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{ project.img }}" alt="Card image cap">
-                    <div class="card-body">
-                    <h5 class="card-title"><strong>{{ project.title }}</strong></h5>
-                    <p class="card-text">{{ project.description }}</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                    <li class="list-group-item" id="list-body">{{ project.tools }}</li>
-                    </ul>
-                    <div class="card-body">
-                    <a href="{{ project.link }}" class="card-link">
-                        <fa name="github" aria-hidden="true" id="git"></fa>
-                    </a>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div> -->
     <mat-grid-list cols="3" rowHeight="500px" class="nm-list animated bounceInDown">
         <mat-grid-tile *ngFor="let project of projects">
             <mat-grid-tile-header>
