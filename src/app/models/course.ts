@@ -1,3 +1,3 @@
 export class Course {
-    name: string;
+    title: string
 }

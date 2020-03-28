@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
   logo = "assets/img/LR.png"
   linkedURL = "https://www.linkedin.com/in/liam-reardon-0b74a9159";
   gitURL = "https://github.com/liamreardon";
-  twitterURL = "https://twitter.com/lreardon22";
+  twitterURL = "https://twitter.com/theraredon";
   email = "mailto:me@liamreardon.io";
   spotify = "https://open.spotify.com/user/12185352237?si=03vv6ZlHTUGiofZRbddlTw";
 

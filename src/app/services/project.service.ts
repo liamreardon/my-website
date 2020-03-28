@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core'
-import { HttpClient, HttpResponse, HttpHeaders, HttpRequest } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs'
 import { Project } from '../models/project';
-import {throwError} from 'rxjs';
+import { throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
 @Injectable({
@@ -10,7 +10,7 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class ProjectService {
 
-  private projectsURL = 'https://raredon-api.herokuapp.com/my_projects.json'
+  private projectsURL = 'http://localhost:8080/projects'
 
   constructor(private http: HttpClient) {}
 

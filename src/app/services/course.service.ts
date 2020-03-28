@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs'
-import { Course} from '../models/course';
-import { throwError} from 'rxjs';
+import { Course } from '../models/course';
+import { throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
 @Injectable({
@@ -10,7 +10,7 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class CourseService {
 
-  private coursesURL = 'https://raredon-api.herokuapp.com/my_courses.json'
+  private coursesURL = 'http://localhost:8080/courses'
 
   constructor(private http: HttpClient) {}
 

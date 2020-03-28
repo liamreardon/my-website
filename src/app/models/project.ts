@@ -1,6 +1,7 @@
 export class Project {
-    name: string;
-    description: string;
-    img: string;
-    link: string;
+    title: string
+    description: string
+    img: string
+    link: string
+    tools: string
 }
