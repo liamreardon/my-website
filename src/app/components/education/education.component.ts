@@ -26,7 +26,10 @@ export class EducationComponent implements OnInit {
   getDocuments() {
     this.courseService.getCourses()
         .subscribe(
-          documents => this.courses = documents,
+          documents => {
+            this.courses = documents
+            this.courses.sort((a, b) => parseInt(a.title.slice(5, 9)) - parseInt(b.title.slice(5, 9)))
+          },
           error => this.errorMessage = <any>error,
           () => this.showSpinner = false
         )

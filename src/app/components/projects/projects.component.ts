@@ -27,7 +27,21 @@ export class ProjectsComponent implements OnInit {
   getDocuments() {
     this.projectService.getProjects()
         .subscribe(
-          documents => this.projects = documents,
+          documents => {
+            const projects: Project[] = []
+            for (const doc of documents) {
+              const p = new Project()
+              p.title = doc.title
+              p.description = doc.description
+              p.img = doc.img
+              p.link = doc.link
+              p.tools = doc.tools
+              p.dateAdded = new Date(doc.dateAdded)
+              projects.push(p)
+            }
+            this.projects = projects
+            this.projects.sort((a, b) => (b.dateAdded).valueOf() - (a.dateAdded).valueOf())
+          },
           error => this.errorMessage = <any>error,
           () => this.showSpinner = false
         )

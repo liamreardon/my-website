@@ -4,4 +4,5 @@ export class Project {
     img: string
     link: string
     tools: string
+    dateAdded: Date
 }

@@ -10,14 +10,13 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class ProjectService {
 
-  private projectsURL = 'http://localhost:8080/projects'
+  private projectsURL = 'http://localhost:8080/api/projects'
 
   constructor(private http: HttpClient) {}
 
   getProjects(): Observable<Project[]> {
       return this.http.get(this.projectsURL).pipe(map((res: Project[]) => {
-          return res
+          return res["projects"]
       }), catchError(error => throwError(error.message || error)))
   }
-  
 }
