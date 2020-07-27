@@ -10,7 +10,7 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class ProjectService {
 
-  private projectsURL = 'http://localhost:8080/api/projects'
+  private projectsURL = "http://ec2-3-135-213-73.us-east-2.compute.amazonaws.com/api/projects"
 
   constructor(private http: HttpClient) {}
 
